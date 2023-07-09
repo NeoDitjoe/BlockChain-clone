@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+}
+
+/* TOP */
+
+.top{
+    cursor: pointer;
+    padding: 0.8%;
+    background-image:linear-gradient(to left, rgb(1, 1, 33),  rgb(67, 111, 215) 45%,  rgb(1, 1, 33)) ;
+}
+
+.top:hover{
+    background-image:linear-gradient(to left, rgb(0, 0, 0),  rgba(5, 5, 137, 0.837) 45%,  rgb(0, 0, 0)) ;
+}
+
+.top p{  
+    font-weight: 500;
+    text-align: center;
+    margin-right: 3.4%;
+    color: rgb(236, 234, 234);
+}
+
+
+
+/* NAV */
+a {
+  text-decoration: none;
+}
+
+nav {
+    /* margin */
+    align-items: center;
+    padding: 0.4%;
+    display: flex; 
+    flex-direction: row;
+    background-color: rgb(1, 1, 33);
+    white-space: nowrap;
+    border-bottom: solid 0.1px rgb(52, 50, 79);
+}
+
+.logo-and-name{
+    align-items: center;
+    padding: 1%;
+    display: flex;
+    gap: 3%;
+    margin-right: 0%;
+    position: relative; 
+    left: 7%;
+}
+
+.web-name{
+    font-size: 155%;
+    color: white;
+}
+
+.com{
+    color: gray;
+}
+
+.logo{
+    height: 25px;
+    width: 25%;
+
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 13%;
+    color: rgb(221, 218, 218);
+    font-size: 100%;
+}
+
+.nav-list > li:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.101);
+    padding: 2%;
+    transition-duration: 0.7s;
+}
+
+.nav-list > li {
+    border-radius: 5px;
+    padding: 2%;
+    position: relative; 
+    left: 40%;
+    cursor: pointer;
+}
+
+.searchIcon {
+    background-color: rgba(128, 128, 128, 0.358);
+    border-radius: 50%;
+    padding: 10px;
+    width: 5.4%;
+    cursor: pointer;
+}
+
+.searchIcon:hover{
+    background-color: rgba(128, 128, 128, 0.584);
+    transition-duration: 0.7s;
+}
+
+.log-sign-search{
+    display: flex;
+    gap: 4%;
+    position: absolute;
+    right: -4.1%;
+
+}
+
+
+.log-sign-search > button {
+    font-weight: 679;
+    border-radius: 10px;
+    height: 46px;
+    width: 16%;
+    cursor: pointer;
+}
+
+.log-sign-search > button:nth-child(2){
+    color: white;
+    border: solid white 2px;
+    background-color: transparent;
+}
+
+.log-sign-search > button:nth-child(2):hover {
+    color: rgb(212, 210, 210);
+    border:solid rgb(212, 210, 210) 2px;
+
+}
+
+.log-sign-search > button:nth-child(3){
+    width: 19%;
+}
+
+.log-sign-search > button:nth-child(3):hover {
+    background-color: rgb(212, 210, 210);
+}
+
+/* Hero */
+
+.hero {
+    height: 96vh;
+    color: white;
+    background-image: linear-gradient(280deg, rgb(186, 79, 115) ,rgb(34, 0, 128) ,rgb(41, 90, 121), rgb(1, 1, 33) 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-left:17%;
+
+
+}
+
+.hero > h1 {
+    margin-top: 13.5%;
+    font-size: 324%;
+}
+
+.hero > p {
+    margin-top: 2%;
+    font-size: 165%;
+    width: 59%;
+}
+
+.hero > form {
+    margin-top: 2.5%;
+    display: flex;
+    gap: 1.4%;
+}
+
+.hero > form >  #email {
+    padding-left: 1%;
+    border-radius: 7px;
+    border: none;
+    background-color: rgba(124, 124, 124, 0.232);
+    font-size: 85%;
+    height: 46px;
+    width: 29.5%;
+    color: white;
+}
+
+.hero > form >  #signup {
+    padding-left: 1.9%;
+    padding-right: 1.9%;
+    color: blue;
+    font-weight: 500;
+    font-size: 95%;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.buy-cryto-button{
+    padding: 5px;
+    width: 63px;
+    height: 62px;
+    border: none;
+    border-radius: 100%;
+    background-color: #1A61B5F0;
+    position: fixed;
+    right: 2.8%;
+    bottom: 10.2%;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.buy-cryto-button:hover::after{
+    content: 'Click to Message ';
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.buy-cryto-button:hover{
+    width: 20%;
+}
+
+.buy-cryto-button-img{
+    width: 70%;
+    border-radius: 50% ;
+}
+
+
+
