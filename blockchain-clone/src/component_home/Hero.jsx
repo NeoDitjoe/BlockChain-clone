@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Getprice from './getprice.jsx'
+// import Getprice from './getprice.jsx'
 import '../App.css'
 
 import shoppingCart from "../assets/shoppingCart.png"
@@ -7,8 +7,7 @@ import bitcoinIcon from "../assets/bitcoinIcon.png"
 import ethereumIcon from "../assets/ethereum.png"
 import solanIcon from "../assets/solanaIcon.png"
 import stellarIcon from "../assets/stellarIcon.png"
-
-
+import PriceLog from './priceLog.jsx';
 
 
 export default function Hero(){
@@ -54,10 +53,13 @@ export default function Hero(){
       </hero>
 
       <button className="buy-cryto-button"><img src = {buyCryptobutton} className='buy-cryto-button-img'></img></button>
+      
 
-      <div className='get-price'>
+      <PriceLog />
+      
+      {/* <div className='get-price'> */}
         
-        <Getprice 
+        {/* <Getprice 
          img = {bitcoinIcon}
           crypto = 'Bitcoin'
           price = '30 298.34'
@@ -87,49 +89,72 @@ export default function Hero(){
           price = '21.58'
           abrv = ' SOL '
           action = ' -1.69%'
-        />
+        /> */}
 
-      </div>
+      {/* </div> */}
 
     </>
   )
 }
 
-// function Price(props) {
-//   const [price, setPrice] = useState('');
+// function Price() {
+//   const [bitcoinData, setBitcoinData] = useState(null);
+//   const [solanaData, setSolanaData] = useState(null);
 
 //   useEffect(() => {
-//     fetchPrice();
+//     fetchCryptoData();
 //   }, []);
 
-//   const fetchPrice = async () => {
-//     try {
-//       const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
-//       const data = await response.json();
-//       const bitcoinPrice = data.bitcoin.usd;
-//       setPrice(bitcoinPrice);
-//     } catch (error) {
-//       console.log(error);
-//     }
+//   const fetchCryptoData = () => {
+//     fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
+//       .then(response => response.json())
+//       .then(data => {
+//         const bitcoin = data.find(coin => coin.id === 'bitcoin');
+//         const solana = data.find(coin => coin.id === 'solana');
+
+//         if (bitcoin) {
+//           setBitcoinData(bitcoin);
+//         } else {
+//           console.log('Bitcoin data not found in the response');
+//         }
+
+//         if (solana) {
+//           setSolanaData(solana);
+//         } else {
+//           console.log('Solana data not found in the response');
+//         }
+//       })
+//       .catch(error => {
+//         console.log(error);
+//       });
 //   };
 
 //   return (
 //     <div>
-//       <div>
-//         <img src={props.img} alt="Bitcoin"></img>
-//         <button>Buy</button>
-//         <button>Trade</button>
-//       </div>
+//       {bitcoinData && (
+//         <GetPrice
+//           img={bitcoinData.image}
+//           crypto={bitcoinData.name}
+//           price={bitcoinData.current_price}
+//           abrv={bitcoinData.symbol}
+//           action="Buy"
+//         />
+//       )}
 
-//       <div>
-//         <p>Bitcoin <span>BTC</span></p>
-//         <p>${price} <span>-0.13</span></p>
-//       </div>
+//       {solanaData && (
+//         <GetPrice
+//           img={solanaData.image}
+//           crypto={solanaData.name}
+//           price={solanaData.current_price}
+//           abrv={solanaData.symbol}
+//           action="Trade"
+//         />
+//       )}
 //     </div>
 //   );
 // }
 
-
+// export default Price;
 
 
 
