@@ -8,7 +8,10 @@ export default function PriceLog() {
   const [ethereumData, setEthereumData] = useState(null)
 
   useEffect(() => {
-    fetchCrytoData();
+   
+    const interval = setInterval(fetchCrytoData, 10000);
+
+    return () => clearInterval(interval);
   }, []);
 
   const fetchCrytoData = () => {
@@ -20,75 +23,72 @@ export default function PriceLog() {
         const stellar = data.find(coin => coin.id === 'stellar')
         const ethereum = data.find(coin => coin.id === 'ethereum')
 
-        if (bitcoin){
+        if (bitcoin ){
           setBitcoinData(bitcoin);
         }
         if (solana){
-          setBitcoinData(solana);
+          setSolanaData(solana);
         }
-        // if (stellar){
-        //   setBitcoinData(stellar);
-        // }
-        // if (ethereum){
-        //   setBitcoinData(ethereum);
-        // }
+        if (stellar){
+          setStellarData(stellar);
+        }
+        if (ethereum){
+          setEthereumData(ethereum);
+        }
       })
       .catch(error => {
-        alert(error)
+        console.log(new error)
       })  
   } 
     
     
-    return (
+  return (
+    
+  <div className='get-price'>
+
+    
+    {bitcoinData && (
+      <GetPrice
+        img={bitcoinData.image}
+        crypto={bitcoinData.name}
+        price={bitcoinData.current_price}
+        abrv={bitcoinData.symbol}
+        action= {bitcoinData.price_change_percentage_24h}
+      /> 
       
-      <div className='get-price'>
+      )}
 
-        {solanaData && (
-            <GetPrice
-            img={solanaData.image}
-            crypto={solanaData.name}
-            price={solanaData.current_price}
-            abrv={solanaData.symbol}
-            action="-0.43"
-          /> )}
+    {ethereumData && (  
+      <GetPrice
+        img={ethereumData.image}
+        crypto={ethereumData.name}
+        price={ethereumData.current_price}
+        abrv={ethereumData.symbol}
+        action={ethereumData.price_change_percentage_24h}
+      /> )}
 
-        {bitcoinData && (
-          <GetPrice
-            img={bitcoinData.image}
-            crypto={bitcoinData.name}
-            price={bitcoinData.current_price}
-            abrv={bitcoinData.symbol}
-            action="-0.43"
-          />
+    {stellarData && (   
+      <GetPrice
+        img={stellarData.image}
+        crypto={stellarData.name}
+        price={stellarData.current_price}
+        abrv={stellarData.symbol}
+        action={stellarData.price_change_percentage_24h}
+      /> )}
 
-          // <GetPrice
-          //   img={solanaData.image}
-          //   crypto={solanaData.name}
-          //   price={solanaData.current_price}
-          //   abrv={solanaData.symbol}
-          //   action="-0.43"
-          // />
-
-          // <GetPrice
-          //   img={ethereumData.image}
-          //   crypto={ethereumData.name}
-          //   price={ethereumData.current_price}
-          //   abrv={ethereumData.symbol}
-          //   action="-0.43"
-          // />
-
-          // <GetPrice
-          //   img={stellarData.image}
-          //   crypto={stellarData.name}
-          //   price={stellarData.current_price}
-          //   abrv={stellarData.symbol}
-          //   action="-0.43"
-          // />
-
-        )}
-      </div>
-
+    {solanaData && (
+        <GetPrice
+        img={solanaData.image}
+        crypto={solanaData.name}
+        price={solanaData.current_price}
+        abrv={solanaData.symbol}
+        action= {solanaData.price_change_percentage_24h}
+      /> )}
       
-    )
+  </div>
+
+    
+  )
 
   }
+

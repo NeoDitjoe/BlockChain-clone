@@ -56,106 +56,11 @@ export default function Hero(){
       
 
       <PriceLog />
-      
-      {/* <div className='get-price'> */}
-        
-        {/* <Getprice 
-         img = {bitcoinIcon}
-          crypto = 'Bitcoin'
-          price = '30 298.34'
-          abrv = ' BTC'
-          action = ' +0.08%'
-        />
 
-        <Getprice 
-          img = {ethereumIcon}
-          crypto = 'Ethereum'
-          price = '1, 861.59'
-          abrv = ' ETH'
-          action = ' -0.34%'
-        />
-
-        <Getprice 
-          img = {stellarIcon}
-          crypto = 'Stellar'
-          price = '0.10'
-          abrv = ' XLM'
-          action = ' -0.20%'
-        />
-
-        <Getprice 
-          img = {solanIcon}
-          crypto = 'Solana'
-          price = '21.58'
-          abrv = ' SOL '
-          action = ' -1.69%'
-        /> */}
-
-      {/* </div> */}
 
     </>
   )
 }
-
-// function Price() {
-//   const [bitcoinData, setBitcoinData] = useState(null);
-//   const [solanaData, setSolanaData] = useState(null);
-
-//   useEffect(() => {
-//     fetchCryptoData();
-//   }, []);
-
-//   const fetchCryptoData = () => {
-//     fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd')
-//       .then(response => response.json())
-//       .then(data => {
-//         const bitcoin = data.find(coin => coin.id === 'bitcoin');
-//         const solana = data.find(coin => coin.id === 'solana');
-
-//         if (bitcoin) {
-//           setBitcoinData(bitcoin);
-//         } else {
-//           console.log('Bitcoin data not found in the response');
-//         }
-
-//         if (solana) {
-//           setSolanaData(solana);
-//         } else {
-//           console.log('Solana data not found in the response');
-//         }
-//       })
-//       .catch(error => {
-//         console.log(error);
-//       });
-//   };
-
-//   return (
-//     <div>
-//       {bitcoinData && (
-//         <GetPrice
-//           img={bitcoinData.image}
-//           crypto={bitcoinData.name}
-//           price={bitcoinData.current_price}
-//           abrv={bitcoinData.symbol}
-//           action="Buy"
-//         />
-//       )}
-
-//       {solanaData && (
-//         <GetPrice
-//           img={solanaData.image}
-//           crypto={solanaData.name}
-//           price={solanaData.current_price}
-//           abrv={solanaData.symbol}
-//           action="Trade"
-//         />
-//       )}
-//     </div>
-//   );
-// }
-
-// export default Price;
-
 
 
 

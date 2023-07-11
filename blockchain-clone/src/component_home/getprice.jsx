@@ -18,7 +18,7 @@ export default function Price(props){
           </div>
   
           <div>
-            <p>{props.crypto }<span>{props.abrv}</span></p>
+            <p>{props.crypto }<span>{props.abrv.toUpperCase()}</span></p>
 
             <p >${props.price}<span className={acttionHighlight ? 'negative' : 'positive'}>{props.action}</span></p>
           </div>
