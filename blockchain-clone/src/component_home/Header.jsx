@@ -13,36 +13,36 @@ export default function Navbar(){
              {
                 show?<Top/>:null
              }
-                <nav>
+            <nav>
+                
                     
-                        
-                    
-                        <a href="https://www.blockchain.com/" target="_blank" className='logo-and-name'  onClick={(e) => {e.preventDefault(), any(true) } }>
+                
+                <a href="https://www.blockchain.com/" target="_blank" className='logo-and-name'  onClick={(e) => {e.preventDefault(), any(true) } }>
 
-                            <img src={logoShop} className="logo" alt="Vite logo"/>
+                    <img src={logoShop} className="logo" alt="Vite logo"/>
 
-                            <h2 className='web-name'>Blockchain<span className='com'>.com</span> </h2>
+                    <h2 className='web-name'>Blockchain<span className='com'>.com</span> </h2>
 
-                        </a>
-                    
+                </a>
+                
+                <div>
+                    <ul className='nav-list'> 
+                        <li onClick={() => any(false)}>App</li>
+                        <li>Exchange</li>
+                        <li>Explorer</li>
+                        <li>Pay</li>
+                        <li>Institutional</li>
+                        <li>...</li>
+                    </ul>
+                </div>
 
-                    <div>
-                        <ul className='nav-list'> 
-                            <li onClick={() => any(false)}>App</li>
-                            <li>Exchange</li>
-                            <li>Explorer</li>
-                            <li>Pay</li>
-                            <li>Institutional</li>
-                            <li>...</li>
-                        </ul>
-                    </div>
-
-                    <div className='log-sign-search'>
-                        <img src={searchIcon} alt='search' className='searchIcon'></img>
-                        <button>Log In</button>
-                        <button>Sign Up</button>
-                    </div>
-                </nav>
+                <div className='log-sign-search'>
+                    <img src={searchIcon} alt='search' className='searchIcon'></img>
+                    <button>Log In</button>
+                    <button>Sign Up</button>
+                </div>
+                
+            </nav>
         </div>
     )
 }

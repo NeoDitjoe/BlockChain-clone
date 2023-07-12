@@ -3,6 +3,7 @@
 }
 
 .header {
+    height: 1px;
     position: fixed;
     width: 100%;
 }
@@ -34,7 +35,7 @@ a {
 }
 
 nav {
-    position: relative;
+    /* position: relative; */
     align-items: center;
     padding: 0.4%;
     display: flex; 
@@ -42,7 +43,7 @@ nav {
     background-color: rgb(1, 1, 33);
     white-space: nowrap;
     border-bottom: solid 0.1px rgb(52, 50, 79);
-    z-index: 1;
+    /* z-index: 1; */
 
 }
 
@@ -138,6 +139,7 @@ nav {
 }
 
 .log-sign-search > button:nth-child(3) {
+    border: none;
     width: 19%;
 } 
 
@@ -148,7 +150,7 @@ nav {
 /* Hero */
 
 .hero {
-    position: relative;
+    /* position: relative; */
     height: 96vh;
     color: white;
     background-image: linear-gradient(280deg, rgb(191, 105, 134) ,rgb(34, 0, 128) ,rgb(41, 90, 121), rgb(1, 1, 33) 70%);
@@ -157,7 +159,7 @@ nav {
     justify-content: center;
     box-sizing: border-box;
     padding-left:17%;
-    z-index: -1;
+    /* z-index: -1; */
 
 
 }
@@ -207,7 +209,7 @@ nav {
     height: 62px;
     border: none;
     border-radius: 100%;
-    background-color: #1A61B5F0;
+    background-color: #1a60b5;
     position: fixed;
     right: 2.8%;
     bottom: 10.2%;
@@ -251,32 +253,36 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 1.5%;
+    gap: 1.9%;
     align-items: center;
 }
 
 /* Getprice */
 
 .price-div {
-    padding: 1.5%;
+    position: relative;
+    left: 7.5%;
+    padding: 1.7%;
     background-color: white;
-    width: 12.4%;
+    width: 14%;
     border-radius: 10px;
     cursor: pointer;
     box-shadow:  0px -10px 30px 10px rgba(0, 0, 0, 0.126);;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .price-div:hover {
     transition-duration :0.5s ;
-    background-color: whitesmoke;
+    background-color: rgb(242, 242, 242);
 }
 
 .price-img {
     border-radius: 50%;
-    width: 24%;
+    width: 22%;
 }
-
+body{
+    height: 200vh;
+}
 .img-buttons {
     display: flex;
     flex-direction: row;
