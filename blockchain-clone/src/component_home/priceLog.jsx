@@ -25,6 +25,7 @@ export default function PriceLog() {
 
         if (bitcoin ){
           setBitcoinData(bitcoin);
+          
         }
         if (solana){
           setSolanaData(solana);
@@ -36,9 +37,8 @@ export default function PriceLog() {
           setEthereumData(ethereum);
         }
       })
-      .catch(error => {
-        console.log(new error)
-      })  
+
+   
   } 
     
     
