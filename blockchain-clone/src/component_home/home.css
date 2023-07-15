@@ -35,7 +35,7 @@ a {
 }
 
 nav {
-    /* position: relative; */
+    position: relative;
     align-items: center;
     padding: 0.4%;
     display: flex; 
@@ -150,7 +150,6 @@ nav {
 /* Hero */
 
 .hero {
-    /* position: relative; */
     height: 96vh;
     color: white;
     background-image: linear-gradient(280deg, rgb(191, 105, 134) ,rgb(34, 0, 128) ,rgb(41, 90, 121), rgb(1, 1, 33) 70%);
@@ -159,9 +158,6 @@ nav {
     justify-content: center;
     box-sizing: border-box;
     padding-left:17%;
-    /* z-index: -1; */
-
-
 }
 
 .hero > h1 {
@@ -248,8 +244,7 @@ nav {
 }
 
 .get-price {
-    position: absolute;
-    top: 86%;
+    margin-top: -5%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -260,14 +255,14 @@ nav {
 /* Getprice */
 
 .price-div {
-    position: relative;
+    /* position: relative; */
     left: 7.5%;
     padding: 1.7%;
     background-color: white;
     width: 14%;
     border-radius: 10px;
     cursor: pointer;
-    box-shadow:  0px -10px 30px 10px rgba(0, 0, 0, 0.126);;
+    box-shadow:  0px 10px 30px 10px rgba(0, 0, 0, 0.126);;
     /* z-index: -1; */
 }
 
