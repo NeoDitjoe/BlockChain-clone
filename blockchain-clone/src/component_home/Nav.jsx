@@ -7,7 +7,7 @@ import './home.css'
 
 export default function Navbar(){
 
-    const [show, any] = useState(true)
+    const [show, setShow] = useState(true)
     return (
         <div className="header">
              {
@@ -17,7 +17,7 @@ export default function Navbar(){
                 
                     
                 
-                <a href="https://www.blockchain.com/" target="_blank" className='logo-and-name'  onClick={(e) => {e.preventDefault(), any(true) } }>
+                <a href="https://www.blockchain.com/" target="_blank" className='logo-and-name'  onClick={(e) => {e.preventDefault(), setShow(true) } }>
 
                     <img src={logoShop} className="logo" alt="Vite logo"/>
 
@@ -27,7 +27,7 @@ export default function Navbar(){
                 
                 <div>
                     <ul className='nav-list'> 
-                        <li onClick={() => any(false)}>App</li>
+                        <li onClick={() => setShow(false)}>App</li>
                         <li>Exchange</li>
                         <li>Explorer</li>
                         <li>Pay</li>
